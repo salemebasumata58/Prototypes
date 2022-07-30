@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Prototypes</h1>
+</body>
+</html>
+<script>
+    //Using Object.create():
+//     let car = {
+//       type: "Four Wheeler",
+//       company: "Tata",
+//       country: "India",
+//       fuel: "patrol",
+//       ABS: "Yes"
+//     }
+
+//     let Safari = Object.create(car);
+//     Safari.Name = "Safari";
+//     Safari.color = "Red"
+//     let Harrier = Object.create(car);
+//     let Nano = Object.create(car);
+//     let Tiago = Object.create(car);
+//     console.log("Safari", Safari)
+//     console.log("Harrier", Harrier);
+//     console.log("Nano", Nano);
+//     console.log("Tiago", Tiago);
+
+//     //Using Constructor function :
+//     function Cars(a, b, c, d){
+//        this.type = a,
+//        this.company = b,
+//        this.fuel = c,
+//        this.ABS = d
+//     }
+//     Cars.prototype.Model=function(name, color, model_year, price){
+//     this.name= name,
+//     this.color= color,
+//     this.model= model_year,
+//     this.price= price
+// }
+//    let car1 = new Cars("Four Wheeler", "Tata", "Patrol", "Yes");
+//    car1.Model("Safari", "Red", "2022", 120000);
+//    console.log("car1", car1);
+
+
+let arr = new Array(2,2,3,4,5,6);
+//   console.log(arr)
+
+Array.prototype.impel=function(value){
+    let index = this.length;
+    this[index] = value;  
+  }
+  arr.impel(10);
+  arr.impel(11)
+  console.log(arr)
+
+Array.prototype.go_off=function(){
+    let index = this.length-1;
+    this.splice(index, 1)  
+  }
+  arr.go_off();
+  arr.go_off();
+    console.log("arr:", arr);
+</script>
